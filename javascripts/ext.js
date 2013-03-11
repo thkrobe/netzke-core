@@ -137,7 +137,7 @@ Ext.define(null, {
   Mask shown during loading of a component. Set to false to not mask. Pass config for Ext.LoadMask for configuring msg/cls, etc.
   Set msg to null if mask without any msg is desirable.
   */
-  netzkeLoadMask: true,
+  netzkeLoadMask: {msg:"加载中..."},
 
   /**
    * Runs through initial config options and does the following:
