@@ -114,7 +114,11 @@ Ext.define("Netzke.classes.Core.Mixin", {
 
         if (Ext.isFunction(this[instr])) {
           // Executing the method.
-          this[instr].apply(this, args);
+          try {
+            this[instr].apply(this, args);
+          } catch(e) {
+            this[instr].apply(this, []);
+          }
         } else {
           var childComponent = this.netzkeGetComponent(instr);
           if (childComponent) {
