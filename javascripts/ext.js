@@ -170,7 +170,7 @@ Ext.define(null, {
         scope = scope || that;
         Netzke.providers[config.id][intp.camelize(true)].call(scope, arg, function(result, remotingEvent) {
           if(remotingEvent.message) {
-            console.error("RPC event indicates an error: ", remotingEvent);
+            //console.error("RPC event indicates an error: ", remotingEvent);
             throw new Error(remotingEvent.message);
           }
           that.netzkeBulkExecute(result); // invoke the endpoint result on the calling component
